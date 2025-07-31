@@ -22,7 +22,7 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Righteous', cursive;
 */
 
-/* DECLARAÃ‡ÃƒO DE VARIÃVEIS */
+/* DECLARAÇÃO DE VARIÁVEIS */
 :root{
     --font-openSans: 'Open Sans';
     --font-righteous: 'Righteous';
@@ -75,6 +75,12 @@ body.scrollStop::before{
     max-width: 1350px;
     margin: 0 auto;
 }
+/* BASE COLUMN STYLE */
+.col{
+    width: 100%;
+}
+
+/* ADJUST SECOND COLUMN (CONTENT) WHEN SIDEBAR IS PRESENT */
 .col ~ .col{
     width: calc(100% - 345px);
     padding: 40px;
@@ -200,6 +206,7 @@ header .app__saldo p{
     box-shadow: 0 2px 5px 0 #d5dee8;
 }
 .app__cabecalho{
+    display: flex;
     justify-content: flex-start;
     padding:10px 30px;
     box-shadow:none;
@@ -341,6 +348,66 @@ select{
     cursor: pointer;
     padding: 0 10px;
     margin-top:10px
+}
+
+/* Make list header match list rows */
+.app__cabecalho div,
+.app__cobrancas div{
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------------------- */
+/*  RESPONSIVE DESIGN  */
+/* ---------------------------- */
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header .app__logo h1{
+        max-width: 100%;
+        min-width: 0;
+        font-size: 24px;
+    }
+    header .app__saldo{
+        width: 100%;
+        text-align: left;
+        padding: 10px 20px;
+    }
+    .app{
+        flex-direction: column;
+    }
+    .app__navegacao{
+        position: relative;
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+    }
+    .col ~ .col{
+        width: 100%;
+        padding: 20px;
+    }
+    .app__busca input{
+        width: 100%;
+        max-width: none;
+    }
+    .app__cabecalho div.header,
+    .app__cobrancas div{
+        width: auto;
+        flex: 1 1 0;
+    }
+    .app__cabecalho div.app__descricao,
+    .app__cobrancas div:nth-child(3){
+        flex: 2 1 0;
+    }
+    .app__popUp{
+        top: 5%;
+        width: 90%;
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
 }
 
 
