@@ -88,25 +88,3 @@ class BancoDados {
 }
 
 export {BancoDados}
-
-class Pet{
-    constructor(nome){
-        this.nome = nome
-        this._cliente = [{nome:"fsdf", pet:{nome:"fsdfsgs"}},{nome:"fsdf", pet:{nome:"fsdfsgs"}},{nome:"fsdf", pet:{nome:"fsdfsgs"}},{nome:"fsdf", pet:{nome:"fsdfsgs"}},]
-    }
-
-    contador(){
-        let result = 0
-        for(let i = 0; i< this._cliente; i++){
-            if(this._cliente[i].pet){
-                return result += 1
-            }
-            return result            
-        }
-        
-    }
-}
-
-const ricardo = new Pet("Ricardo")
-
-console.log(ricardo.contador())
