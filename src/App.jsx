@@ -8,7 +8,11 @@ import ClienteForm from './components/ClienteForm'
 import CobrancaForm from './components/CobrancaForm'
 import CobrancasList from './components/CobrancasList'
 import SearchBar from './components/SearchBar'
+import PagamentoForm from './components/PagamentoForm'
+import NotaFiscalForm from './components/NotaFiscalForm'
 import { useCobrancas } from './hooks/useCobrancas'
+import { usePagamentos } from './hooks/usePagamentos'
+import { useNotasFiscais } from './hooks/useNotasFiscais'
 import './App.css'
 
 function App() {

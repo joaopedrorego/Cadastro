@@ -3,7 +3,10 @@ class BancoDados {
     // PROPRIEDADES PARA ARMAZENAR DE FORMA LOCAL/TEMPORÁRIA
     static db = {
         clientes: [],
-        cobrancas: []
+        cobrancas: [],
+        pagamentos: [],
+        notasFiscais: [],
+        formasPagamento: []
     }
 
     // MÉTODO PARA CADASTRAR => RODA (CLIENTE OU COBRANÇA)
@@ -53,7 +56,13 @@ class BancoDados {
             return this.db
         } else {
             // CASO O LOCALSTORAGE ESTEJA VAZIO RETORNA UM OBJETO VAZIO
-            return { clientes: [], cobrancas: [] }
+            return { 
+                clientes: [], 
+                cobrancas: [], 
+                pagamentos: [], 
+                notasFiscais: [], 
+                formasPagamento: [] 
+            }
         }
     }
 
